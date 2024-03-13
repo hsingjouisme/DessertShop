@@ -1,0 +1,236 @@
+body{
+    width: 100%;
+    background: linear-gradient(135deg,#D2E9FF,	#FFF8D7,#F1E1FF);
+    height: 100%;
+}
+*{
+    font-family: 'Kosugi Maru', sans-serif;
+}
+@media screen and (max-width: 767px) {
+    #news_btn{
+        position: absolute;
+        left: -9999px;
+      }
+    .nav-items:not(:first-child){
+        display: none;
+    }
+    
+    #nav-logo{
+        position: relative;
+        left: -48%;
+        top:0;
+        transform: translate(48%,0%);
+        padding-left: 20px;
+        text-align: left;
+    }
+    .menu_icon{
+        position: absolute;
+        top:60%;
+        left:93%;
+        transform: translate(-60%,-93%);
+    }
+    .cart{
+        position: absolute;
+        top:60%;
+        left:85%;
+        transform: translate(-60%,-93%);
+    }
+    .col{
+        padding-top: 80px;
+    }
+}
+@media screen and (min-width:767px) {
+    .menu_icon{
+        position: absolute;
+        visibility: hidden;
+    } 
+    #show_menu_overlay{
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
+/* 導覽列 */
+.menu_icon{
+    color: brown;
+    cursor: pointer;
+}
+
+.nav-items{
+    text-align: center;
+    cursor: pointer;
+    color: darkgrey;
+    align-items: baseline;
+    margin: 10px;
+}
+.nav-items:hover{
+    color: brown;
+}
+.logo{
+    font-weight: 600;
+    font-size: 22px;
+}
+#nav-logo{
+    cursor: pointer;
+    align-items: baseline;
+    margin: 10px;
+    color: brown;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#logo_eng_name{
+    font-family: 'Yomogi', cursive; 
+    font-weight: 600;
+    font-size: 18px;
+}
+.item{
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.item-eng{
+    font-family: 'Yomogi', cursive; 
+}
+.top-nav{
+    background:snow;
+    box-shadow:0px 5px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center; /*使導覽列上的每個item，靠中間對齊*/
+    position: relative;
+}
+
+/* 購物籃 */
+.count{
+    background-color: #F1E1FF;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: darkmagenta;
+    text-align: center;
+    font-size: 13px;
+
+}
+.cart{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    color: gainsboro;
+}
+.cart:hover{
+    color: brown;
+    cursor: pointer;
+}
+
+/* overlay */
+#show_menu_overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(227, 236, 225, 0.9);
+    z-index: 2;
+    cursor: pointer;
+}
+.overlay_menu{
+    margin: 100px auto 20px;
+    color: darkolivegreen;
+}
+.overlay_menu_item:hover{
+    color: brown;
+}
+.overlay_menu_item{
+    padding-bottom: 15px;
+    font-family: 'Poiret One','Kosugi Maru';
+}
+
+/* 各個section的標題 */
+.title{
+    font-size: 50px;
+    color: brown;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/* more btn */
+.more_btn{
+    border-radius: 10px;
+    background-color: snow;
+    padding: 10px;
+    width: 120px;
+    border: 1px dashed brown;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.more_btn:hover{
+    background-color: brown;
+    color: snow;
+}
+
+/* intro */
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+    /* 為了取消container-fluid邊邊空隙 */
+ }
+
+/* 本店簡介和人氣商品 */
+#about_us{
+    text-align: center;
+    margin: 50px auto 30px;
+}
+.col-sm-6{
+    padding: 20px;
+    display: flex; 
+    align-items: center; 
+    /* 讓content內文字可以垂直置中*/
+}
+.content{
+    padding: 15px 0px;
+    text-align: left;
+}
+.col-sm-6 img{
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+
+
+/* 最新消息 */
+.news_img img{
+    width: 90%;
+    border-radius: 15px;
+    position: relative;
+}
+.col-sm-4{
+    margin-bottom: 20px;
+}
+.col-sm-4:hover .img_text {
+    visibility: visible;
+    
+}
+.img_text{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+    visibility: hidden;
+    color: brown;
+}
+.col-sm-4:hover img{
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    background-color: snow;
+    padding: 15px;
+    text-align: center;
+}
