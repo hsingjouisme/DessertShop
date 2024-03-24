@@ -74,12 +74,15 @@
 </head>
 <body>
     <div class="top-nav fixed-top">
-        <span class="nav-items" onclick="location.href='news.html'" id="news_btn">
+        <span id="nav-logo" onclick="location.href='index.html'">
+            <div class="logo">糖露坊</div>
+            <div class="logo" id="logo_eng_name">EnchantedSugar Dreamscape</div>
+        </span>
+        <span class="nav-items"  id="news_btn" onclick="location.href='news.html'">
             <div class="item">最新消息</div>
             <div class="item-eng">News</div>
         </span>
-      
-        <span class="nav-items" onclick="location.href='menu.html'" style="color: 	#66B3FF;">
+        <span class="nav-items" onclick="location.href='menu.html'">
             <div class="item">美味甜點</div>
             <div class="item-eng">Menu</div>
         </span>
@@ -87,20 +90,17 @@
             <div class="item">門市據點</div>
             <div class="item-eng">Store</div>
         </span>
-        <span id="nav-logo" onclick="location.href='index.html'">
-            <div class="logo">糖露坊</div>
-            <div class="logo" id="logo_eng_name">EnchantedSugar Dreamscape</div>
-        </span>
+        
         <span class="nav-items" onclick="location.href='about_us.html'" >
             <div class="item">關於我們</div>
             <div class="item-eng">About us</div>
         </span>
-        <span class="nav-items" onclick="location.href='member.html'">
+        <!-- <span class="nav-items" onclick="location.href='member.html'">
             <div class="item">會員專區</div>
             <div class="item-eng">Member</div>
-        </span>
+        </span> -->
         <span class="item cart" onclick="location.href='shopping_cart.html'">
-            <span class="material-symbols-outlined" >
+            <span class="material-symbols-outlined">
                 shopping_cart
             </span>
             <div class="count" id="cartCount">0</div>
@@ -114,15 +114,16 @@
             </span>
             <div class="overlay_menu">
                 <h3 onclick="location.href='index.html'" class="overlay_menu_item" >糖露坊<br>home</h3>
-                <h2 onclick="location.href='about_us.html'" class="overlay_menu_item">關於我們<br>about us</h1>
-                <h2 onclick="location.href='menu.html'" class="overlay_menu_item" >美味甜點<br>menu</h1>
-                <h2 onclick="location.href='store.html'" class="overlay_menu_item" >門市據點<br>store</h1>
-                <h2 onclick="location.href='news.html'" class="overlay_menu_item" >最新消息<br>news</h1>
-                <h2 onclick="location.href='member.html'" class="overlay_menu_item">會員專區<br>store</h1>
-                <h2 onclick="location.href='shopping_cart.html'" class="overlay_menu_item">購物籃<br>news</h1>
+                <h3 onclick="location.href='about_us.html'" class="overlay_menu_item">關於我們<br>about us</h3>
+                <h3 onclick="location.href='menu.html'" class="overlay_menu_item" >美味甜點<br>menu</h3>
+                <h3 onclick="location.href='store.html'" class="overlay_menu_item" >門市據點<br>store</h3>
+                <h3 onclick="location.href='news.html'"  class="overlay_menu_item">最新消息<br>news</h3>
+                <h3 onclick="location.href='member.html'" class="overlay_menu_item">會員專區<br>store</h3>
+                <h3 onclick="location.href='shopping_cart.html'" class="overlay_menu_item" id="shopping_cart_btn">購物籃<br>news</h3>
             </div>
         </div>   
     </div>
+
 
     <div class="container">
         <!-- 甜點menu -->

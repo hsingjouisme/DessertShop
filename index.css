@@ -97,8 +97,9 @@ body{
     display: flex;
     width: 100%;
     text-align: center;
-    justify-content: center; /*使導覽列上的每個item，靠中間對齊*/
+    justify-content: center; 
     position: relative;
+    margin: 0px auto;
 }
 
 /* 購物籃 */
@@ -178,7 +179,7 @@ body{
 .container-fluid{
     padding-left: 0;
     padding-right: 0;
-    /* 為了取消container-fluid邊邊空隙 */
+    margin: 0px auto;
  }
 
 /* 本店簡介和人氣商品 */
@@ -204,6 +205,9 @@ body{
 
 
 /* 最新消息 */
+#news{
+    text-align: center;
+}
 .news_img img{
     width: 90%;
     border-radius: 15px;
