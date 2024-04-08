@@ -185,3 +185,15 @@ tbody tr:hover{
     width: 100%;
     text-align: center;
 }
+
+.store_layout>input{
+    width: 90%;
+    max-width: 500px;
+    border: none;
+    height: 35px;
+    padding: 10px;
+}
+.store_layout>input:focus{
+    outline: none;
+    
+}

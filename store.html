@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Poiret+One&family=Yomogi&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
@@ -75,71 +77,32 @@
 
 
     <!-- 門市資訊 -->
-    <div class="container-fluid">
-        <div class="store_layout">
+    <div id="app">
+        
+        <div class="container-fluid">
+          <div class="store_layout">
+            <input type="text" v-model="searchQuery" placeholder="請輸入關鍵字進行搜尋...">
             <table>
-                <thead>
+              <thead>
                 <tr>
-                    <th>門市名稱</th>
-                    <th>電話</th>
-                    <th>地址</th>
+                  <th>門市名稱</th>
+                  <th>電話</th>
+                  <th>地址</th>
                 </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>總店</td>
-                    <td>03-123-4567</td>
-                    <td>新竹市糖果大道123號</td>
+              </thead>
+              <tbody>
+                <tr v-for="store in filteredStores" :key="store.id">
+                  <td>{{ store.name }}</td>
+                  <td>{{ store.phone }}</td>
+                  <td>{{ store.address }}</td>
                 </tr>
-                <tr>
-                <td>牛奶門市</td>
-                <td>02-1234567</td>
-                <td>台北市大安區牛奶路29號</td>
-                </tr>
-                <tr>
-                    <td>蜜糖門市</td>
-                    <td>04-2345678</td>
-                    <td>台中市大雅區蜜糖街22號</td>
-                </tr>
-                <tr>
-                    <td>花生門市</td>
-                    <td>05-3456789</td>
-                    <td>屏東縣萬巒鄉花生路5弄193號</td>
-                </tr>
-                <tr>
-                <td>起司門市</td>
-                <td>03-4567890</td>
-                <td>新竹縣竹北市起司街42號</td>
-                </tr>
-                <tr>
-                    <td>吐司門市</td>
-                    <td>02-9876543</td>
-                    <td>台北市信義區吐司街92號</td>
-                </tr>
-                <tr>
-                    <td>香草門市</td>
-                    <td>04-8765432</td>
-                    <td>台中市大安區香草大街93號</td>
-                </tr>
-                <tr>
-                <td>草莓門市</td>
-                <td>05-7654321</td>
-                <td>屏東縣恆春鎮草莓大街100號</td>
-                </tr>
-                <tr>
-                    <td>糖果門市</td>
-                    <td>03-6543210</td>
-                    <td>新竹市糖果大道1號</td>
-                </tr>
-                <tr>
-                    <td>甜甜門市</td>
-                    <td>02-1122334</td>
-                    <td>台北市萬華區甜甜路84號</td>
-                </tr>
-                </tbody>
+              </tbody>
             </table>
+          </div>
         </div>
-    </div>
+      </div>
+    
+
 
     <!-- footer -->
     <section id="footer">
@@ -155,6 +118,39 @@
             </div>
         </footer>
     </section>
+
+    <!-- vue.js -->
+    <script>
+    new Vue({
+      el: '#app', 
+      data: {
+        searchQuery: '', 
+        stores: [ 
+          { id: 1, name: '總店', phone: '03-1234567', address: '新竹市糖果大道123號' },
+          { id: 2, name: '牛奶門市', phone: '02-1357997', address: '台北市大安區牛奶路29號' },
+          { id: 3, name: '蜜糖門市', phone: '04-2345678', address: '台中市大雅區蜜糖街22號' },
+          { id: 4, name: '花生門市', phone: '05-3456789', address: '屏東縣萬巒鄉花生路5弄193號' },
+          { id: 5, name: '起司門市', phone: '03-4567890', address: '新竹縣竹北市起司街42號' },
+          { id: 6, name: '吐司門市', phone: '02-9876543', address: '台北市信義區吐司街92號' },
+          { id: 7, name: '香草門市', phone: '04-8765432', address: '台中市大安區香草大街93號' },
+          { id: 8, name: '草莓門市', phone: '05-7654321', address: '屏東縣恆春鎮草莓大街100號' },
+          { id: 9, name: '糖果門市', phone: '03-6543210', address: '新竹市糖果大道1號' },
+          { id: 10, name: '甜甜圈門市', phone: '02-1122334', address: '台北市萬華區甜甜圈路84號' },
+        ]
+      },
+      computed: {
+        filteredStores: function() {
+          return this.stores.filter(store => {
+            return (
+              store.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+              store.phone.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+              store.address.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
+          });
+        }
+      }
+    });
+    </script>
 
     <!-- 引入外部js -->
     <script src="store.js"></script>

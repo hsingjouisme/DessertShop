@@ -21,26 +21,3 @@ function scrollToSection(sectionId) {
 }
 
 
-//在購物籃icon顯示現在購物籃總數量
-
-const productButtons = document.querySelectorAll('.add_btn');
-const cartCountDisplay = document.getElementById('cartCount');
-
-function addToCart(itemName, price) {
-    let num = parseInt(cartCountDisplay.innerText);
-    num++;
-    cartCountDisplay.innerText = num;
-}
-
-productButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const itemName = this.dataset.itemName;
-        const price = parseInt(this.dataset.price);
-        localStorage.removeItem('cartCount'); // 清除本地存儲的購物籃數量
-    });
-});
-
-window.onload = function() {
-    cartCountDisplay.innerText = 0; // 在網頁加載時重置購物籃數量為0
-};
-

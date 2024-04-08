@@ -153,13 +153,6 @@ footer{
     color: brown;
     cursor: pointer;
 }
-#content{
-    background-color: snow;
-    width: 90%;
-    max-width: 1000px;
-    margin: 100px auto;
-    padding: 20px;
-}
 #cartList{
     margin: 130px auto 50px;
     background-color: snow;
@@ -168,19 +161,11 @@ footer{
     text-align: center;
     border-radius: 30px;
 }
-.grid-container {
-    grid-gap: 10px;
-    padding: 20px 35px;
-}
-
-.grid-item {
-    border-bottom: 1px solid brown;
-    text-align: center;
+.list_layout{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    line-height: 75px;
+    text-align: center;
 }
-
-.grid-item img{
-    width: 100%;
+.item{
+    padding: 10px;
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Table Search Example</title>
+  <!-- 引入 Vue.js 库 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="searchQuery" placeholder="Search...">
+    <div class="container-fluid">
+      <div class="store_layout">
+        <table>
+          <thead>
+            <tr>
+              <th>門市名稱</th>
+              <th>電話</th>
+              <th>地址</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="store in filteredStores" :key="store.id">
+              <td>{{ store.name }}</td>
+              <td>{{ store.phone }}</td>
+              <td>{{ store.address }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 在 HTML 中编写 Vue 代码 -->
+  <script>
+    // 创建一个 Vue 实例
+    new Vue({
+      el: '#app', // 指定 Vue 实例挂载的元素
+      data: {
+        searchQuery: '', // 搜索关键字
+        stores: [ // 假设的门店数据
+          { id: 1, name: '總店', phone: '03-123-4567', address: '新竹市糖果大道123號' },
+          { id: 2, name: '牛奶門市', phone: '02-1234567', address: '台北市大安區牛奶路29號' },
+          { id: 3, name: '蜜糖門市', phone: '04-2345678', address: '台中市大雅區蜜糖街22號' },
+          // 其他门店数据...
+        ]
+      },
+      computed: {
+        // 使用计算属性过滤搜索结果
+        filteredStores: function() {
+          return this.stores.filter(store => {
+            return (
+              store.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+              store.phone.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+              store.address.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
