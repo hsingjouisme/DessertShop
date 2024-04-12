@@ -77,9 +77,15 @@ var newsInfo= [
 ]
 
 for (var i = 0; i < newsInfo.length; i++) {
-    var news =
-        `<div class="news_title">${newsInfo[i].title}</div>
-        <img class="img_news" src="${newsInfo[i].image}">
-        <div class="content">${newsInfo[i].content}</div>`;
+    var news = `
+        <div class="news">
+            <div class="news_title">${newsInfo[i].title}</div>
+            <img class="img_news" src="${newsInfo[i].image}">
+            <div class="content">${newsInfo[i].content}</div>
+        </div>`;
+
     $('#newsContent').append(news);
+    
+    
+    $('#newsContent').find('.news_title').eq(i).append(`<div id="div_${i+1}"></div>`);
 }

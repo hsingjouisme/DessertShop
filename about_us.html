@@ -17,6 +17,13 @@
         .material-symbols-outlined{
             font-size: 30px;
         }
+        @media (max-width:768px) {
+            .layout{
+                grid-template-columns: auto;
+                grid-row: 1;
+                grid-column: 1;
+            }
+        }
     </style>
     <title>糖露坊-關於我們</title>
 </head>
@@ -43,10 +50,6 @@
             <div class="item">關於我們</div>
             <div class="item-eng">About us</div>
         </span>
-        <!-- <span class="nav-items" onclick="location.href='member.html'">
-            <div class="item">會員專區</div>
-            <div class="item-eng">Member</div>
-        </span> -->
         <span class="item cart" onclick="location.href='shopping_cart.html'">
             <span class="material-symbols-outlined">
                 shopping_cart
@@ -71,36 +74,12 @@
             </div>
         </div>   
     </div>
-    <section  style="padding-top: 100px; padding-left: 20px; padding-right: 20px;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src="https://images.pexels.com/photos/4552170/pexels-photo-4552170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="100%">
-                    <p style="padding-top:10px ;">糖露坊，位於新竹市糖果大道，是一個甜點愛好者的夢幻之地。</p>
-                        <p style="padding-top:10px ;">我們的甜品店成立於民國100年，一直以來致力於為顧客提供最美味的糖點和甜點體驗。</p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="introduce">
-                        <h3>品味的奇妙旅程</h3>
+    <div class="layout">
+        <div class="introduction" id="introduction"></div>
+        <div id="content"></div>
+    </div>
     
-                        走進糖露坊，您將被迷人的糖果色調和甜美的糕點香氣所包圍。我們的糕點師傅精心研發每一款甜品，以追求完美的口感和味道。無論是多層蛋糕、香醇巧克力、還是水果優格杯，每一道甜點都是品味的奇妙旅程。
     
-                        <p><h3>糖露坊的特色</h3></p>
-                        
-    
-                        創意無限：我們引以為傲的是我們的創意。糖露坊的菜單總是充滿新意，不斷推陳出新，總有令人驚喜的驚喜等待著您。
-                        <br>夢幻彩虹：我們總是相信，彩虹的顏色代表著生活的美好。因此，您將在我們的甜點中找到各種彩虹色調，讓您的味蕾和視覺都享受到繽紛的盛宴。
-                        <br> 新竹之愛：我們熱愛新竹，也將這份愛融入到我們的甜點中。我們使用當地的新鮮水果和優質的食材，讓您品味到新竹的美味。
-    
-                        <p><h3>社區參與和未來計畫</h3></p>
-                        在糖露坊，我們深信社區參與的重要性。我們定期舉辦甜點工作坊，讓大家有機會親手製作美味的糖點，並分享甜蜜的時光。此外，我們計劃在未來擴展我們的糖露坊，開設更多分店，讓更多人品味到我們的美味。<br><br>
-    
-                        無論您是來自新竹還是其他地方，我們都歡迎您來糖露坊，一同享受繽紛的甜點和溫馨的環境。我們期待在未來的每一天，都為您帶來更多的驚喜和甜蜜回憶。
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
      <section id="footer">
         <footer>
             <div style="display: inline-block;">

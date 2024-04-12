@@ -24,6 +24,11 @@
             grid-row: 3;
             grid-column: 1;
         }
+            #newsItem{
+            grid-template-columns: auto;
+            grid-row: 1;
+            grid-column: 3;
+            }
         }
     </style>
     <title>糖露坊-首頁</title>
@@ -134,55 +139,7 @@
         <div class="title">News</div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="news_img" data-aos="fade-down">
-                        <img src="https://images.pexels.com/photos/6161503/pexels-photo-6161503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" onclick="location.href='news.html#news_1'" width="90%">
-                    </div>
-                    <div class="img_text">
-                        2023-10-20：新店資訊
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="news_img"data-aos="fade-up">
-                        <img src="https://images.pexels.com/photos/6061396/pexels-photo-6061396.jpeg" onclick="location.href='news.html#news_2'" width="90%">
-                    </div>
-                    <div class="img_text">
-                        2023-10-30：開設甜點教室
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="news_img" data-aos="fade-down">
-                        <img  src="https://images.pexels.com/photos/6061848/pexels-photo-6061848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" onclick="location.href='news.html#news_3'" width="90%">
-                    </div>
-                    <div class="img_text">
-                        2023-11-02：產學合作
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="news_img" data-aos="fade-up">
-                        <img  src="https://images.pexels.com/photos/5650634/pexels-photo-5650634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" onclick="location.href='news.html#news_4'" width="90%">
-                    </div>
-                    <div class="img_text">
-                        2023-11-10：新品上市！
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="news_img"data-aos="fade-down">
-                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" onclick="location.href='news.html#news_5'" width="90%">
-                    </div>
-                    <div class="img_text">
-                        2023-11-25：團隊規模再擴大
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="news_img" data-aos="fade-up">
-                        <img src="https://images.pexels.com/photos/1448721/pexels-photo-1448721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" onclick="location.href='news.html#news_6'"width="90%">
-                    </div>
-                    <div class="img_text">
-                        2024-1-02：經典甜點回歸！
-                    </div>
-                </div>
-                <!-- <div class="more_btn" onclick="location.href='news.html'">read more+</div> -->
+                <div id="newsItem"></div>
             </div>
         </div>  
     </section>

@@ -165,6 +165,7 @@ table{
     width: 90%;
     margin: 30px auto 20px;
     border-collapse: collapse;
+    background-color: snow;
 }
 thead{
     background-color: brown;
@@ -176,9 +177,10 @@ th,td{
     width: 30%;
 }
 tbody tr:hover{
-    background-color:	#EBD3E8;
+    background-color:	#E1C4C4;
     opacity: 0.7;
 }
+
 .container-fluid{
     margin: 0px auto;
     max-width: 1000px;
