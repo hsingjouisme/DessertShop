@@ -189,7 +189,7 @@ button:hover{
     flex: 1;
     margin: 10px;
 }
-.dessert img{
+.dessertImg{
     width: 100%;
 }
 .dessert_title{
@@ -276,21 +276,6 @@ footer{
 #section_newest{
     padding-top: 100px;
 }
-/* #section_popular{
-    padding-top: 100px;
-}
-#section_tart{
-    padding-top: 100px;
-}
-#section_cake{
-    padding-top: 100px;
-}
-#section_drink{
-    padding-top: 100px;
-}
-#section_other{
-    padding-top: 100px;
-} */
 
 .dessert_content{
     padding-left: 200px;
