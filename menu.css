@@ -166,7 +166,6 @@ body{
     margin: auto;
 }
 .menu_title{
-    padding-top: 70px;
     padding-left: 20px;
     padding-bottom: 20px;
     font-size: 30px;
@@ -278,7 +277,7 @@ footer{
 }
 
 .dessert_content{
-    margin: 0px auto;
+    margin: 0px auto 50px;
 }
 .container{
     display: grid;
@@ -295,8 +294,8 @@ footer{
 }
 .dessertMenu{
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -306,7 +305,7 @@ footer{
     font-size: 20px;
     margin-bottom: 20px;
     position: fixed;
-    bottom: 20px;
+    top: 120px;
     right: 30px;
 }
 .dessertMenu:hover{
@@ -314,4 +313,22 @@ footer{
     color: brown;
     border: 1px solid brown;
     cursor: pointer;
+}
+.category{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.dessertMenuLayout{
+    position: fixed;
+    top: 120px;
+    right: 100px;
+}
+.category:hover{
+    border-bottom: 1px solid brown;
+}
+#btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#btn_6{
+    transform: rotate(-15deg);
+}
+#section_other,#section_drink,#section_tart,#section_cake,#section_popular{
+    padding-top: 100px;
 }
