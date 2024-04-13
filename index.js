@@ -6,6 +6,40 @@ function off_menu_overlay(){
     document.getElementById("show_menu_overlay").style.display="none";
 }
 
+//popular
+var popularItem =[
+    {
+        title:'莓果夢露杯',
+        content:'草莓奶油杯，夢幻滋味，仙境口感與色彩盡在一口。',
+        img:'https://images.pexels.com/photos/11981166/pexels-photo-11981166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        target:'menu.html#popular'
+    },
+    {
+        title:'巧音甜蜜樂章',
+        content:'美味的巧克力蛋糕，每一層都滿載著濃郁的巧克力口感。',
+        img:'https://images.pexels.com/photos/3740196/pexels-photo-3740196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        target:'menu.html#popular'
+    },
+    {
+        title:'莓巧悅',
+        content:'結合新鮮莓果和濃郁巧克力，帶來極致甜蜜。',
+        img:'https://images.pexels.com/photos/7525161/pexels-photo-7525161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        target:'menu.html#popular'
+    }
+]
+for(var i=0;i<popularItem.length;i++){
+    var popular=
+    `<a href="${popularItem[i].target}" class='target'>
+    <div class="popularItem" data-aos="fade-up">
+    <img class="popular_img" src="${popularItem[i].img}">
+    <h4 class="popular_title">${popularItem[i].title}</h4>
+    <div>${popularItem[i].content}</div>
+    </div>
+    </a>
+    `;
+    $('#popularLayout').append(popular)
+}
+
 //News
 var newsItem =[
     {
@@ -42,7 +76,7 @@ var newsItem =[
 
 for(var i=0;i< newsItem.length; i++){
     var news=`
-    <div class="news">
+    <div class="news" data-aos="fade-down">
         <a href="${newsItem[i].target}"><img class="news_img" src="${newsItem[i].img}"></a>
         
         <div class="img_text">${newsItem[i].title}</div>

@@ -217,11 +217,10 @@ body{
     padding: 15px 0px;
     text-align: center;
 }
-
 #popular{
     margin:50px  auto;
 }
-.popular_layout{
+#popularLayout{
     max-width: 1000px;
     margin: 0px auto;
     width: 90%;
@@ -229,12 +228,28 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
-.popular_item img{
-    width: 100%;
+.popular_img{
+    width: 90%;
+    border-radius: 50%;
 }
-.popular_item{
+.popularItem{
     background-color: snow;
-    padding: 30px 20px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.popular_title{
+    color: brown;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.target{
+    text-decoration: none;
+}
+.popularItem:hover{
+    filter: brightness(70%);
 }
 
 

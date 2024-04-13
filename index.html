@@ -19,10 +19,9 @@
             font-size: 30px;
         }
         @media (max-width:768px) {
-            .popular_layout{
+            #popularLayout{
             grid-template-columns: auto;
-            grid-row: 3;
-            grid-column: 1;
+            grid-row: 1;
         }
             #newsItem{
             grid-template-columns: auto;
@@ -94,9 +93,9 @@
 
     <!-- 簡介 -->
     <section id="about_us">
-        <div class="about_layout">
+        <div class="about_layout" data-aos="fade-left">
             <div class="about_top">About us</div>
-            <div class="about_content" data-aos="fade-left">
+            <div class="about_content">
                 「糖露坊」創立於民國100年，是一個充滿創意的甜點天堂。<br>
                 我們致力於創造出令人驚嘆的甜點藝術品，每一口都充滿著無限的夢幻。<br>
                 我們引以為傲的是我們的獨特風味，這是融合了高雅的品味和新鮮食材的完美結合，讓您品味到美味和品質的巔峰。
@@ -107,32 +106,11 @@
 
     <!-- 人氣商品 -->
     <section id="popular">
-        <div class="title">popular</div>
-        <div class="popular_layout">
-            <div class="popular_item" data-aos="fade-down" >
-                <img src="https://images.pexels.com/photos/11981166/pexels-photo-11981166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="90%" style="border-radius: 50%;">
-                    <div class="content" >
-                        <h4 style="color: brown;">莓果夢露杯</h4>
-                        草莓奶油杯，夢幻滋味，仙境口感與色彩盡在一口。
-                    </div>
-            </div>
-            <div class="popular_item" data-aos="fade-down" >
-                <img src="https://images.pexels.com/photos/3740196/pexels-photo-3740196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="90%" style="border-radius: 50%;" >
-                    <div class="content" >
-                        <h4 style="color: brown;">巧音甜蜜樂章</h4>
-                        美味的巧克力蛋糕，每一層都滿載著濃郁的巧克力口感。
-                    </div>
-            </div>
-            <div class="popular_item "data-aos="fade-down" >
-                <img src="https://images.pexels.com/photos/7525161/pexels-photo-7525161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="90%" style="border-radius: 50%;">
-                    <div class="content" >
-                        <h4 style="color: brown;">莓巧悅</h4>
-                        結合新鮮莓果和濃郁巧克力，帶來極致甜蜜。
-                    </div>
-            </div>
-        </div>
+        <div class="title">Popular</div>
+        <div id="popularLayout"></div>
         <div class="more_btn" style="width: 200px;" onclick="location.href='menu.html'">other goods</div>
     </section>
+
 
     <!-- 最新消息 -->
     <section id="news">
