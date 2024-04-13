@@ -155,17 +155,36 @@ footer{
 }
 #cartList{
     margin: 130px auto 50px;
+    padding: 10px;
     background-color: snow;
-    width: 90%;
-    max-width: 1200px;
-    text-align: center;
-    border-radius: 30px;
-}
-.list_layout{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 95%;
+    max-width: 800px;
     text-align: center;
 }
 .item{
     padding: 10px;
+}
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.product img{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.productItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#totalPrice {
+    color: red; 
+    font-size: 25px;
+}
+#totalPriceContainer{
+    margin:10px auto;
+    width: 95%;
+    max-width: 800px;
+    text-align: right;
 }

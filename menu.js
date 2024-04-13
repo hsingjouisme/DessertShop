@@ -85,7 +85,7 @@ var dessertItems = [
     ,{
         id:6,
         title:'糖露仙女蛋糕',
-        image:'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image:'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         description:'粉紅夢幻風味，為您帶來甜美愉悅的口感饗宴。',
         price:580,
         category:'蛋糕'
@@ -93,7 +93,7 @@ var dessertItems = [
     ,{
         id:7,
         title:'水果蛋糕',
-        image:'https://images.pexels.com/photos/7525161/pexels-photo-7525161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image:'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         description:'新鮮新鮮櫻桃與巧克力的搭配，帶給你甜而不膩的享受！',
         price:550,
         category:'蛋糕',
@@ -204,7 +204,7 @@ for (var i = 0; i < dessertItems.length; i++) {
                 <div class="dessert_title">${dessertItems[i].title}</div>
                 <p>${dessertItems[i].description}</p>
                 <p>＄${dessertItems[i].price}</p>
-                <button class="button add_btn">加入購物籃</button>
+                <button class="button add_btn" data-index="${i}">加入購物籃</button>
             </div>`;
         $('#newest').append(dessertInformation);
     }
@@ -215,7 +215,7 @@ for (var i = 0; i < dessertItems.length; i++) {
                 <div class="dessert_title">${dessertItems[i].title}</div>
                 <p>${dessertItems[i].description}</p>
                 <p>＄${dessertItems[i].price}</p>
-                <button class="button add_btn">加入購物籃</button>
+                <button class="button add_btn" data-index="${i}">加入購物籃</button>
             </div>`;
         $('#popular').append(dessertInformation);
     }
@@ -226,7 +226,7 @@ for (var i = 0; i < dessertItems.length; i++) {
                 <div class="dessert_title">${dessertItems[i].title}</div>
                 <p>${dessertItems[i].description}</p>
                 <p>＄${dessertItems[i].price}</p>
-                <button class="button add_btn">加入購物籃</button>
+                <button class="button add_btn" data-index="${i}">加入購物籃</button>
             </div>`;
         $('#cake').append(dessertInformation);
     }
@@ -237,7 +237,7 @@ for (var i = 0; i < dessertItems.length; i++) {
                 <div class="dessert_title">${dessertItems[i].title}</div>
                 <p>${dessertItems[i].description}</p>
                 <p>＄${dessertItems[i].price}</p>
-                <button class="button add_btn">加入購物籃</button>
+                <button class="button add_btn" data-index="${i}">加入購物籃</button>
             </div>`;
         $('#tart').append(dessertInformation);
     } 
@@ -248,7 +248,7 @@ for (var i = 0; i < dessertItems.length; i++) {
                 <div class="dessert_title">${dessertItems[i].title}</div>
                 <p>${dessertItems[i].description}</p>
                 <p>＄${dessertItems[i].price}</p>
-                <button class="button add_btn">加入購物籃</button>
+                <button class="button add_btn" data-index="${i}">加入購物籃</button>
             </div>`;
         $('#drink').append(dessertInformation);
     } 
@@ -259,8 +259,30 @@ for (var i = 0; i < dessertItems.length; i++) {
                 <div class="dessert_title">${dessertItems[i].title}</div>
                 <p>${dessertItems[i].description}</p>
                 <p>＄${dessertItems[i].price}</p>
-                <button class="button add_btn">加入購物籃</button>
+                <button class="button add_btn" data-index="${i}">加入購物籃</button>
             </div>`;
         $('#other').append(dessertInformation);
     } 
+}
+
+var cartCount = localStorage.getItem('cartCount') || 0;
+var countElement = document.getElementById('cartCount');
+countElement.textContent = cartCount;
+
+var addButtons = document.querySelectorAll('.add_btn');
+
+addButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var index = this.getAttribute('data-index'); // 假設你的按鈕有 data-index 屬性，用於標識商品在 dessertItems 陣列中的索引
+        addToCart(dessertItems[index]); // 將商品添加到購物籃中
+        cartCount++; 
+        countElement.textContent = cartCount;
+        localStorage.setItem('cartCount', cartCount);      
+    });
+});
+
+function addToCart(product) {
+    var cart = JSON.parse(localStorage.getItem("cart")) || []; // 確保取得購物籃內容
+    cart.push(product); // 將商品加入購物籃
+    localStorage.setItem("cart", JSON.stringify(cart)); // 將更新後的購物籃存回 localStorage
 }
