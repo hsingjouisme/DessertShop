@@ -278,14 +278,15 @@ footer{
 }
 
 .dessert_content{
-    padding-left: 200px;
+    /* padding-left: 200px; */
+    margin: 0px auto;
 }
 .container{
     display: grid;
 }
 .dessert_item{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -293,4 +294,25 @@ footer{
 .dessert_layout{
     padding: 10px;
     margin: 0px auto;
+}
+.dessertMenu{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: snow;
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.dessertMenu:hover{
+    background-color: snow;
+    color: brown;
+    cursor: pointer;
 }

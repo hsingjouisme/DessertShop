@@ -109,7 +109,7 @@ var dessertItems = [
         title:'草莓塔',
         image:'https://images.pexels.com/photos/9403582/pexels-photo-9403582.jpeg',
         description:'奶香草莓塔，濃情味美，香脆塔皮，一試難忘的甜蜜誘人。',
-        price:42,
+        price:60,
         category:'塔派類'
     },
     {
@@ -143,6 +143,37 @@ var dessertItems = [
         description:'令人心動的多彩馬卡龍，每一口都是繽紛嘉年華的饗宴。',
         price:42,
         category:'其他'
+    }
+    ,{
+        id:16,
+        title:'拿鐵',
+        image:'https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        description:'慵懶享受，濃郁拿鐵。',
+        price:50,
+        category:'飲料'
+    },{
+        id:17,
+        title:'美式',
+        image:'https://images.pexels.com/photos/7578179/pexels-photo-7578179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        description:'純粹享受，美式風情。',
+        price:35,
+        category:'飲料'
+    }
+    ,{
+        id:18,
+        title:'水果派',
+        image:'https://images.pexels.com/photos/1157835/pexels-photo-1157835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        description:'豐富多彩的口味饗宴，每一口都是驚喜。',
+        price:75,
+        category:'塔派類'
+    }
+    ,{
+        id:19,
+        title:'珍珠奶茶',
+        image:'https://images.pexels.com/photos/6412830/pexels-photo-6412830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        description:'香醇的奶香與茶香完美結合，珍珠入口滑順，口感饱滿，每一口都帶來濃郁的奶茶風味。',
+        price:50,
+        category:'飲料'
     }
 ]
 
