@@ -274,11 +274,10 @@ footer{
     border-radius: 15px 15px 0 0 ;
 }
 #section_newest{
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 .dessert_content{
-    /* padding-left: 200px; */
     margin: 0px auto;
 }
 .container{
@@ -292,8 +291,7 @@ footer{
     grid-template-columns: 1fr 1fr 1fr;
 }
 .dessert_layout{
-    padding: 10px;
-    margin: 0px auto;
+    margin: 0px auto 50px;
 }
 .dessertMenu{
     border-radius: 50%;
@@ -309,10 +307,11 @@ footer{
     margin-bottom: 20px;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 30px;
 }
 .dessertMenu:hover{
     background-color: snow;
     color: brown;
+    border: 1px solid brown;
     cursor: pointer;
 }
