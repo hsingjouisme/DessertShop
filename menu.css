@@ -323,6 +323,16 @@ footer{
     top: 120px;
     right: 100px;
     display: none;
+    padding: 15px;
+}
+.dessertMenuLayout{
+    background-color: transparent;
+    border-radius: 0px 0px 0px 50px;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    width: 200px;
+    height: 300px;
 }
 .category:hover{
     border-bottom: 1px solid brown;
@@ -332,4 +342,13 @@ footer{
 }
 #section_other,#section_drink,#section_tart,#section_cake,#section_popular{
     padding-top: 100px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; 
 }

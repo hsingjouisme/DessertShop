@@ -21,11 +21,24 @@ function scrollToSection(sectionId) {
 }
 
 //甜點的menu
-function shoDessertMenu(){
-    document.getElementById('dessertMenuBtn').style.display='block';
-    document.getElementById('dessertMenu').innerText='close';
+function showDessertMenu() {
+    var button = document.getElementById("dessertMenu");
+    var menu = document.getElementById("dessertMenuBtn");
+    var bgcolor = document.getElementById('dessertMenuLayout'); 
+    var overlay = document.getElementById("overlay");   
+    if (button.innerHTML === "CLOSE") {
+        button.innerHTML = "MENU";
+        menu.style.display = "none"; 
+        bgcolor.style.backgroundColor='transparent';
+        overlay.style.display = "none"; 
+    } else {
+        button.innerHTML = "CLOSE";
+        menu.style.display = "block"; 
+        bgcolor.style.backgroundColor='snow';
+        overlay.style.display = "block"; 
+        
+    }
 }
-
 
 //商品資訊
 var dessertItems = [
