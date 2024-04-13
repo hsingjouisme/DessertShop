@@ -1,10 +1,10 @@
-    function show_menu_items(){
-        document.getElementById("show_menu_overlay").style.display="block";
-    }
+function show_menu_items(){
+    document.getElementById("show_menu_overlay").style.display="block";
+}
 
-    function off_menu_overlay(){
-        document.getElementById("show_menu_overlay").style.display="none";
-    } 
+function off_menu_overlay(){
+    document.getElementById("show_menu_overlay").style.display="none";
+} 
 
 //點選dessert_menu_btn，可以跳到指定位置，且不會被上方menu擋住 
 function scrollToSection(sectionId) {
@@ -18,6 +18,12 @@ function scrollToSection(sectionId) {
         behavior: 'smooth'
         });
     }
+}
+
+//甜點的menu
+function shoDessertMenu(){
+    document.getElementById('dessertMenuBtn').style.display='block';
+    document.getElementById('dessertMenu').innerText='close';
 }
 
 

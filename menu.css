@@ -318,10 +318,11 @@ footer{
     cursor: pointer;
     margin-bottom: 10px;
 }
-.dessertMenuLayout{
+.dessertMenuBtn{
     position: fixed;
     top: 120px;
     right: 100px;
+    display: none;
 }
 .category:hover{
     border-bottom: 1px solid brown;
