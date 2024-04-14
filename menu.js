@@ -273,7 +273,7 @@ var addButtons = document.querySelectorAll('.add_btn');
 
 addButtons.forEach(function(button) {
     button.addEventListener('click', function() {
-        var index = this.getAttribute('data-index'); // 假設你的按鈕有 data-index 屬性，用於標識商品在 dessertItems 陣列中的索引
+        var index = this.getAttribute('data-index'); 
         addToCart(dessertItems[index]); // 將商品添加到購物籃中
         cartCount++; 
         countElement.textContent = cartCount;
