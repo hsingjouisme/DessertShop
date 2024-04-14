@@ -121,16 +121,16 @@ footer{
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(227, 236, 225, 0.9);
+    background-color:	#E1C4C4;
     z-index: 2;
     cursor: pointer;
 }
 .overlay_menu{
     margin: 100px auto 20px;
-    color: darkolivegreen;
+    color: 	#613030;
 }
 .overlay_menu_item:hover{
-    color: brown;
+    color: snow;
 }
 .overlay_menu_item{
     padding-bottom: 20px;

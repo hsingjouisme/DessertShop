@@ -119,16 +119,16 @@ footer{
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(227, 236, 225, 0.9);
+    background-color:	#E1C4C4;
     z-index: 2;
     cursor: pointer;
 }
 .overlay_menu{
     margin: 100px auto 20px;
-    color: darkolivegreen;
+    color: 	#613030;
 }
 .overlay_menu_item:hover{
-    color: brown;
+    color: snow;
 }
 .overlay_menu_item{
     padding-bottom: 20px;
@@ -179,12 +179,49 @@ footer{
     align-items: center;
 }
 #totalPrice {
-    color: red; 
-    font-size: 25px;
+    color: brown; 
+    font-size: 20px;
 }
 #totalPriceContainer{
     margin:10px auto;
-    width: 95%;
+    width: 90%;
     max-width: 800px;
     text-align: right;
+}
+.decrease{
+    margin-right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: brown;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add{
+    margin-left: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: brown;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dessertBtn{
+    border: none;
+    background: brown;
+    color: snow;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+.dessertBtn:hover{
+    border: 1px solid brown;
+    color: brown;
+    background-color: snow;
 }
